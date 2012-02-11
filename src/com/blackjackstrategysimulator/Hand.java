@@ -42,9 +42,55 @@ public class Hand
     {
         if(twoCardsInHandWithEqualValue())
             return handValueOfPairInHand();
-        else if(oneCardInHandIsAce() && !busted())
+        else if(oneCardInHandIsAce())
             return softHandValue();
-        return null;
+        return hardHandValue();
+    }
+
+    private HandValue hardHandValue()
+    {
+        int count = 0;
+        for(Card card : cardsDealt)
+        {
+            count += card.getPoints();
+        }
+        switch (count)
+        {
+            case 5:
+                return HandValue.HardFive;
+            case 6:
+                return HandValue.HardSix;
+            case 7:
+                return HandValue.HardSeven;
+            case 8:
+                return HandValue.HardEight;
+            case 9:
+                return HandValue.HardNine;
+            case 10:
+                return HandValue.HardTen;
+            case 11:
+                return HandValue.HardEleven;
+            case 12:
+                return HandValue.HardTwelve;
+            case 13:
+                return HandValue.HardThirteen;
+            case 14:
+                return HandValue.HardFourteen;
+            case 15:
+                return HandValue.HardFifteen;
+            case 16:
+                return HandValue.HardSixteen;
+            case 17:
+                return HandValue.HardSeventeen;
+            case 18:
+                return HandValue.HardEighteen;
+            case 19:
+                return HandValue.HardNineteen;
+            case 20:
+                return HandValue.HardTwenty;
+            default:
+                return null;
+        }
     }
 
     private HandValue softHandValue()
