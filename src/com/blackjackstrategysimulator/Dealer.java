@@ -2,18 +2,18 @@ package com.blackjackstrategysimulator;
 
 public class Dealer
 {
-    private Deck deck;
+    private Shoe shoe;
     private DealerHand hand;
 
-    public Dealer(final Deck deck, final DealerHand hand)
+    public Dealer(final Shoe shoe, final DealerHand hand)
     {
-        this.deck = deck;
+        this.shoe = shoe;
         this.hand = hand;
     }
 
     public Card deal()
     {
-        return deck.draw();
+        return shoe.draw();
     }
 
     public DealerHand getHand()

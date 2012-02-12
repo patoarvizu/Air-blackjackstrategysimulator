@@ -134,7 +134,7 @@ public class Hand
         return null;
     }
 
-    private boolean busted()
+    public boolean busted()
     {
         boolean seenAce = false;
         int count = 0;

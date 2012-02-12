@@ -8,7 +8,7 @@ import org.junit.Test;
 public class DealerTest
 {
     private Dealer dealer;
-    private Deck deck = new Deck();
+    private Shoe deck = new Shoe(1);
     private DealerHand dealerHand = new DealerHand();
     
     @Before
