@@ -2,73 +2,73 @@ package com.blackjackstrategysimulator;
 
 public enum Card
 {
-    SpadeAce(11, Suit.Spade),
-    Spade2(2, Suit.Spade),
-    Spade3(3, Suit.Spade),
-    Spade4(4, Suit.Spade),
-    Spade5(5, Suit.Spade),
-    Spade6(6, Suit.Spade),
-    Spade7(7, Suit.Spade),
-    Spade8(8, Suit.Spade),
-    Spade9(9, Suit.Spade),
-    Spade10(10, Suit.Spade),
-    SpadeJack(10, Suit.Spade),
-    SpadeQueen(10, Suit.Spade),
-    SpadeKing(10, Suit.Spade),
-    ClubAce(11, Suit.Club),
-    Club2(2, Suit.Club),
-    Club3(3, Suit.Club),
-    Club4(4, Suit.Club),
-    Club5(5, Suit.Club),
-    Club6(6, Suit.Club),
-    Club7(7, Suit.Club),
-    Club8(8, Suit.Club),
-    Club9(9, Suit.Club),
-    Club10(10, Suit.Club),
-    ClubJack(10, Suit.Club),
-    ClubQueen(10, Suit.Club),
-    ClubKing(10, Suit.Club),
-    DiamondAce(11, Suit.Diamond),
-    Diamond2(2, Suit.Diamond),
-    Diamond3(3, Suit.Diamond),
-    Diamond4(4, Suit.Diamond),
-    Diamond5(5, Suit.Diamond),
-    Diamond6(6, Suit.Diamond),
-    Diamond7(7, Suit.Diamond),
-    Diamond8(8, Suit.Diamond),
-    Diamond9(9, Suit.Diamond),
-    Diamond10(10, Suit.Diamond),
-    DiamondJack(10, Suit.Diamond),
-    DiamondQueen(10, Suit.Diamond),
-    DiamondKing(10, Suit.Diamond),
-    HeartAce(11, Suit.Heart),
-    Heart2(2, Suit.Heart),
-    Heart3(3, Suit.Heart),
-    Heart4(4, Suit.Heart),
-    Heart5(5, Suit.Heart),
-    Heart6(6, Suit.Heart),
-    Heart7(7, Suit.Heart),
-    Heart8(8, Suit.Heart),
-    Heart9(9, Suit.Heart),
-    Heart10(10, Suit.Heart),
-    HeartJack(10, Suit.Heart),
-    HeartQueen(10, Suit.Heart),
-    HeartKing(10, Suit.Heart);
-    
-    private int value;
+    SpadeAce(Rank.Ace, Suit.Spade),
+    Spade2(Rank.Two, Suit.Spade),
+    Spade3(Rank.Three, Suit.Spade),
+    Spade4(Rank.Four, Suit.Spade),
+    Spade5(Rank.Five, Suit.Spade),
+    Spade6(Rank.Six, Suit.Spade),
+    Spade7(Rank.Seven, Suit.Spade),
+    Spade8(Rank.Eight, Suit.Spade),
+    Spade9(Rank.Nine, Suit.Spade),
+    Spade10(Rank.Ten, Suit.Spade),
+    SpadeJack(Rank.Jack, Suit.Spade),
+    SpadeQueen(Rank.Queen, Suit.Spade),
+    SpadeKing(Rank.King, Suit.Spade),
+    ClubAce(Rank.Ace, Suit.Club),
+    Club2(Rank.Two, Suit.Club),
+    Club3(Rank.Three, Suit.Club),
+    Club4(Rank.Four, Suit.Club),
+    Club5(Rank.Five, Suit.Club),
+    Club6(Rank.Six, Suit.Club),
+    Club7(Rank.Seven, Suit.Club),
+    Club8(Rank.Eight, Suit.Club),
+    Club9(Rank.Nine, Suit.Club),
+    Club10(Rank.Ten, Suit.Club),
+    ClubJack(Rank.Jack, Suit.Club),
+    ClubQueen(Rank.Queen, Suit.Club),
+    ClubKing(Rank.King, Suit.Club),
+    DiamondAce(Rank.Ace, Suit.Diamond),
+    Diamond2(Rank.Two, Suit.Diamond),
+    Diamond3(Rank.Three, Suit.Diamond),
+    Diamond4(Rank.Four, Suit.Diamond),
+    Diamond5(Rank.Five, Suit.Diamond),
+    Diamond6(Rank.Six, Suit.Diamond),
+    Diamond7(Rank.Seven, Suit.Diamond),
+    Diamond8(Rank.Eight, Suit.Diamond),
+    Diamond9(Rank.Nine, Suit.Diamond),
+    Diamond10(Rank.Ten, Suit.Diamond),
+    DiamondJack(Rank.Jack, Suit.Diamond),
+    DiamondQueen(Rank.Queen, Suit.Diamond),
+    DiamondKing(Rank.King, Suit.Diamond),
+    HeartAce(Rank.Ace, Suit.Heart),
+    Heart2(Rank.Two, Suit.Heart),
+    Heart3(Rank.Three, Suit.Heart),
+    Heart4(Rank.Four, Suit.Heart),
+    Heart5(Rank.Five, Suit.Heart),
+    Heart6(Rank.Six, Suit.Heart),
+    Heart7(Rank.Seven, Suit.Heart),
+    Heart8(Rank.Eight, Suit.Heart),
+    Heart9(Rank.Nine, Suit.Heart),
+    Heart10(Rank.Ten, Suit.Heart),
+    HeartJack(Rank.Jack, Suit.Heart),
+    HeartQueen(Rank.Queen, Suit.Heart),
+    HeartKing(Rank.King, Suit.Heart);
+
+    private Rank rank;
     private Suit suit;
 
-    private Card(int value, Suit suit)
+    private Card(Rank rank, Suit suit)
     {
-        this.value = value;
+        this.rank = rank;
         this.suit = suit;
     }
 
     public int getPoints()
     {
-        return value;
+        return rank.getPoints();
     }
-    
+
     public Suit getSuit()
     {
         return suit;
