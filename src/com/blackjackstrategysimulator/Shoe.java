@@ -24,6 +24,7 @@ public class Shoe
         {
             Collections.addAll(cardsLeft, Card.values());
         }
+        Collections.shuffle(cardsLeft);
         cut = decks * LOWER_LIMIT_CUT + (int)(Math.random() * ((UPPER_LIMIT_CUT - LOWER_LIMIT_CUT) + 1));
     }
 
@@ -34,12 +35,11 @@ public class Shoe
 
     public Card draw()
     {
-        int rnd = (int) (Math.random() * cardsLeft.size());
         if(shoeReachedCutCard())
         {
           crossedCut = true;
         }
-        return cardsLeft.remove(rnd);
+        return cardsLeft.remove(0);
     }
 
     public boolean hasCrossedCut()
@@ -51,5 +51,4 @@ public class Shoe
     {
       return cardsLeft.size() == cut;
     }
-
 }
