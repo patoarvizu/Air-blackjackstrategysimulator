@@ -99,7 +99,7 @@ public class Hand
         boolean seenAce = false;
         for(Card card : cardsDealt)
         {
-            if(!seenAce && card.getPoints() == 11)
+            if(!seenAce && card.getRank() == Rank.Ace)
             {
                 seenAce = true;
                 continue;
@@ -140,7 +140,7 @@ public class Hand
         int count = 0;
         for(Card card : cardsDealt)
         {
-            if(card.getPoints() == 11)
+            if(card.getRank() == Rank.Ace)
                 seenAce = true;
             count += card.getPoints();
         }
@@ -150,7 +150,7 @@ public class Hand
     private boolean oneCardInHandIsAce()
     {
         for(Card card : cardsDealt)
-            if(card.getPoints() == 11)
+            if(card.getRank() == Rank.Ace)
                 return true;
         return false;
     }
@@ -158,27 +158,30 @@ public class Hand
     private HandValue handValueOfPairInHand()
     {
         Card card = cardsDealt.get(0);
-        switch (card.getPoints())
+        switch (card.getRank())
         {
-            case 11:
+            case Ace:
                 return HandValue.AcePair;
-            case 10:
+            case King:
+            case Queen:
+            case Jack:
+            case Ten:
                 return HandValue.TenPair;
-            case 9:
+            case Nine:
                 return HandValue.NinePair;
-            case 8:
+            case Eight:
                 return HandValue.EightPair;
-            case 7:
+            case Seven:
                 return HandValue.SevenPair;
-            case 6:
+            case Six:
                 return HandValue.SixPair;
-            case 5:
+            case Five:
                 return HandValue.FivePair;
-            case 4:
+            case Four:
                 return HandValue.FourPair;
-            case 3:
+            case Three:
                 return HandValue.ThreePair;
-            case 2:
+            case Two:
                 return HandValue.TwoPair;
             default:
                 return null;
