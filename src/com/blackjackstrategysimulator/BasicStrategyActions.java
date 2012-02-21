@@ -36,6 +36,8 @@ public class BasicStrategyActions
         actionMap.put(HandValue.HardNineteen, dealersFaceUpCardActionMap);
         actionMap.put(HandValue.HardEighteen, dealersFaceUpCardActionMap);
         actionMap.put(HandValue.HardSeventeen, dealersFaceUpCardActionMap);
+        actionMap.put(HandValue.SoftAceNine, dealersFaceUpCardActionMap);
+        actionMap.put(HandValue.SoftAceEight, dealersFaceUpCardActionMap);
         
         dealersFaceUpCardActionMap = new EnumMap<DealersFaceUpCard, Action>(DealersFaceUpCard.class);
         dealersFaceUpCardActionMap.put(DealersFaceUpCard.Two, Action.Stand);
@@ -142,8 +144,35 @@ public class BasicStrategyActions
         dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ace, Action.Hit);
         actionMap.put(HandValue.HardEight, dealersFaceUpCardActionMap);
         actionMap.put(HandValue.HardSeven, dealersFaceUpCardActionMap);
+        actionMap.put(HandValue.HardSix, dealersFaceUpCardActionMap);
+        actionMap.put(HandValue.HardFive, dealersFaceUpCardActionMap);
         
-        actionMap.put(HandValue.SoftAceSeven, getDealersFaceUpCardActionMapEntry(DealersFaceUpCard.Three, Action.DoubleOrStand));
+        dealersFaceUpCardActionMap = new EnumMap<DealersFaceUpCard, Action>(DealersFaceUpCard.class);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Two, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Three, Action.DoubleOrStand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Four, Action.DoubleOrStand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Five, Action.DoubleOrStand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Six, Action.DoubleOrStand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Seven, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Eight, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Nine, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ten, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ace, Action.Hit);
+        actionMap.put(HandValue.SoftAceSeven, dealersFaceUpCardActionMap);
+        
+        dealersFaceUpCardActionMap = new EnumMap<DealersFaceUpCard, Action>(DealersFaceUpCard.class);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Two, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Three, Action.DoubleOrHit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Four, Action.DoubleOrHit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Five, Action.DoubleOrHit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Six, Action.DoubleOrHit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Seven, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Eight, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Nine, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ten, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ace, Action.Hit);
+        actionMap.put(HandValue.SoftAceSix, dealersFaceUpCardActionMap);
+        
         actionMap.put(HandValue.AcePair, getDealersFaceUpCardActionMapEntry(DealersFaceUpCard.Two, Action.Split));
     }
 
