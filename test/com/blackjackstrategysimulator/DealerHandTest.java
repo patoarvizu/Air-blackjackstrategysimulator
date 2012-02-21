@@ -31,4 +31,10 @@ public class DealerHandTest
         Card[] dealerCards = dealerHand.getCards();
         assertEquals(2, dealerCards.length);
     }
+    
+    @Test
+    public void verifyDealerCardUp()
+    {
+        assertEquals(DealersFaceUpCard.Ten, dealerHand.getFaceUpCard());
+    }
 }

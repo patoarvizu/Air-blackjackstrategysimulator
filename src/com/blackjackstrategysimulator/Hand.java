@@ -191,7 +191,7 @@ public class Hand
     private boolean twoCardsInHandWithEqualValue()
     {
         return cardsDealt.size() == 2
-                & cardsDealt.get(0).getPoints() == cardsDealt.get(1)
+                && cardsDealt.get(0).getPoints() == cardsDealt.get(1)
                         .getPoints();
     }
 
