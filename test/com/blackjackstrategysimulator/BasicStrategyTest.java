@@ -1824,10 +1824,136 @@ public class BasicStrategyTest
     }
 
     @Test
-    public void verifyBasicStrategyActionForHard8VsAceIsHit()
+    public void verifyBasicStrategyActionForHard7Vs2IsHit()
     {
         Hand hand = new Hand();
-        hand.addCard(Card.Club6);
+        hand.addCard(Card.Club5);
+        hand.addCard(Card.Club2);
+        DealerHand dealerHand = new DealerHand();
+        dealerHand.addCard(Card.Club2);
+        dealerHand.addCard(Card.Club2);
+        BasicStrategy basicStrategy = new BasicStrategy(hand, dealerHand);
+        Action action = basicStrategy.resolveAction();
+        assertEquals(Action.Hit, action);
+    }
+
+    @Test
+    public void verifyBasicStrategyActionForHard7Vs3IsHit()
+    {
+        Hand hand = new Hand();
+        hand.addCard(Card.Club5);
+        hand.addCard(Card.Club2);
+        DealerHand dealerHand = new DealerHand();
+        dealerHand.addCard(Card.Club3);
+        dealerHand.addCard(Card.Club2);
+        BasicStrategy basicStrategy = new BasicStrategy(hand, dealerHand);
+        Action action = basicStrategy.resolveAction();
+        assertEquals(Action.Hit, action);
+    }
+
+    @Test
+    public void verifyBasicStrategyActionForHard7Vs4IsHit()
+    {
+        Hand hand = new Hand();
+        hand.addCard(Card.Club5);
+        hand.addCard(Card.Club2);
+        DealerHand dealerHand = new DealerHand();
+        dealerHand.addCard(Card.Club4);
+        dealerHand.addCard(Card.Club2);
+        BasicStrategy basicStrategy = new BasicStrategy(hand, dealerHand);
+        Action action = basicStrategy.resolveAction();
+        assertEquals(Action.Hit, action);
+    }
+
+    @Test
+    public void verifyBasicStrategyActionForHard7Vs5IsHit()
+    {
+        Hand hand = new Hand();
+        hand.addCard(Card.Club5);
+        hand.addCard(Card.Club2);
+        DealerHand dealerHand = new DealerHand();
+        dealerHand.addCard(Card.Club5);
+        dealerHand.addCard(Card.Club2);
+        BasicStrategy basicStrategy = new BasicStrategy(hand, dealerHand);
+        Action action = basicStrategy.resolveAction();
+        assertEquals(Action.Hit, action);
+    }
+
+    @Test
+    public void verifyBasicStrategyActionForHard7Vs6IsHit()
+    {
+        Hand hand = new Hand();
+        hand.addCard(Card.Club5);
+        hand.addCard(Card.Club2);
+        DealerHand dealerHand = new DealerHand();
+        dealerHand.addCard(Card.Club6);
+        dealerHand.addCard(Card.Club2);
+        BasicStrategy basicStrategy = new BasicStrategy(hand, dealerHand);
+        Action action = basicStrategy.resolveAction();
+        assertEquals(Action.Hit, action);
+    }
+
+    @Test
+    public void verifyBasicStrategyActionForHard7Vs7IsHit()
+    {
+        Hand hand = new Hand();
+        hand.addCard(Card.Club5);
+        hand.addCard(Card.Club2);
+        DealerHand dealerHand = new DealerHand();
+        dealerHand.addCard(Card.Club7);
+        dealerHand.addCard(Card.Club2);
+        BasicStrategy basicStrategy = new BasicStrategy(hand, dealerHand);
+        Action action = basicStrategy.resolveAction();
+        assertEquals(Action.Hit, action);
+    }
+
+    @Test
+    public void verifyBasicStrategyActionForHard7Vs8IsHit()
+    {
+        Hand hand = new Hand();
+        hand.addCard(Card.Club5);
+        hand.addCard(Card.Club2);
+        DealerHand dealerHand = new DealerHand();
+        dealerHand.addCard(Card.Club8);
+        dealerHand.addCard(Card.Club2);
+        BasicStrategy basicStrategy = new BasicStrategy(hand, dealerHand);
+        Action action = basicStrategy.resolveAction();
+        assertEquals(Action.Hit, action);
+    }
+
+    @Test
+    public void verifyBasicStrategyActionForHard7Vs9IsHit()
+    {
+        Hand hand = new Hand();
+        hand.addCard(Card.Club5);
+        hand.addCard(Card.Club2);
+        DealerHand dealerHand = new DealerHand();
+        dealerHand.addCard(Card.Club9);
+        dealerHand.addCard(Card.Club2);
+        BasicStrategy basicStrategy = new BasicStrategy(hand, dealerHand);
+        Action action = basicStrategy.resolveAction();
+        assertEquals(Action.Hit, action);
+    }
+
+    @Test
+    public void verifyBasicStrategyActionForHard7Vs10IsHit()
+    {
+        Hand hand = new Hand();
+        hand.addCard(Card.Club5);
+        hand.addCard(Card.Club2);
+        DealerHand dealerHand = new DealerHand();
+        dealerHand.addCard(Card.ClubKing);
+        dealerHand.addCard(Card.Club2);
+        BasicStrategy basicStrategy = new BasicStrategy(hand, dealerHand);
+        Action action = basicStrategy.resolveAction();
+        assertEquals(Action.Hit, action);
+    }
+
+    @Test
+    public void verifyBasicStrategyActionForHard7VsAceIsHit()
+    {
+        Hand hand = new Hand();
+        hand.addCard(Card.Club5);
         hand.addCard(Card.Club2);
         DealerHand dealerHand = new DealerHand();
         dealerHand.addCard(Card.ClubAce);

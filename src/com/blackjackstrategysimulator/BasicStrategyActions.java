@@ -141,6 +141,7 @@ public class BasicStrategyActions
         dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ten, Action.Hit);
         dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ace, Action.Hit);
         actionMap.put(HandValue.HardEight, dealersFaceUpCardActionMap);
+        actionMap.put(HandValue.HardSeven, dealersFaceUpCardActionMap);
         
         actionMap.put(HandValue.SoftAceSeven, getDealersFaceUpCardActionMapEntry(DealersFaceUpCard.Three, Action.DoubleOrStand));
         actionMap.put(HandValue.AcePair, getDealersFaceUpCardActionMapEntry(DealersFaceUpCard.Two, Action.Split));
