@@ -173,15 +173,72 @@ public class BasicStrategyActions
         dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ace, Action.Hit);
         actionMap.put(HandValue.SoftAceSix, dealersFaceUpCardActionMap);
         
-        actionMap.put(HandValue.AcePair, getDealersFaceUpCardActionMapEntry(DealersFaceUpCard.Two, Action.Split));
-    }
+        dealersFaceUpCardActionMap = new EnumMap<DealersFaceUpCard, Action>(DealersFaceUpCard.class);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Two, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Three, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Four, Action.DoubleOrHit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Five, Action.DoubleOrHit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Six, Action.DoubleOrHit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Seven, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Eight, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Nine, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ten, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ace, Action.Hit);
+        actionMap.put(HandValue.SoftAceFive, dealersFaceUpCardActionMap);
+        actionMap.put(HandValue.SoftAceFour, dealersFaceUpCardActionMap);
 
-    private EnumMap<DealersFaceUpCard, Action> getDealersFaceUpCardActionMapEntry(
-            DealersFaceUpCard dealersFaceUpCard, Action action)
-    {
-        EnumMap<DealersFaceUpCard, Action> faceUpCardActionMap = new EnumMap<DealersFaceUpCard, Action>(
-                DealersFaceUpCard.class);
-        faceUpCardActionMap.put(dealersFaceUpCard, action);
-        return faceUpCardActionMap;
+        dealersFaceUpCardActionMap = new EnumMap<DealersFaceUpCard, Action>(DealersFaceUpCard.class);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Two, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Three, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Four, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Five, Action.DoubleOrHit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Six, Action.DoubleOrHit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Seven, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Eight, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Nine, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ten, Action.Hit);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ace, Action.Hit);
+        actionMap.put(HandValue.SoftAceThree, dealersFaceUpCardActionMap);
+        actionMap.put(HandValue.SoftAceTwo, dealersFaceUpCardActionMap);
+        
+        dealersFaceUpCardActionMap = new EnumMap<DealersFaceUpCard, Action>(DealersFaceUpCard.class);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Two, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Three, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Four, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Five, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Six, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Seven, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Eight, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Nine, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ten, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ace, Action.Split);
+        actionMap.put(HandValue.AcePair, dealersFaceUpCardActionMap);
+        actionMap.put(HandValue.EightPair, dealersFaceUpCardActionMap);
+        
+        dealersFaceUpCardActionMap = new EnumMap<DealersFaceUpCard, Action>(DealersFaceUpCard.class);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Two, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Three, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Four, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Five, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Six, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Seven, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Eight, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Nine, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ten, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ace, Action.Stand);
+        actionMap.put(HandValue.TenPair, dealersFaceUpCardActionMap);
+        
+        dealersFaceUpCardActionMap = new EnumMap<DealersFaceUpCard, Action>(DealersFaceUpCard.class);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Two, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Three, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Four, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Five, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Six, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Seven, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Eight, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Nine, Action.Split);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ten, Action.Stand);
+        dealersFaceUpCardActionMap.put(DealersFaceUpCard.Ace, Action.Stand);
+        actionMap.put(HandValue.NinePair, dealersFaceUpCardActionMap);
     }
 }
